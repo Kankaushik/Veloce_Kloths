@@ -1,0 +1,91 @@
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("img/header_1.jpg");
+  animation: bgChange 12s infinite;
+  backdrop-filter: blur(6px);
+}
+
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide1 {
+  background-image: url("img/header_5.jpg");
+}
+.slide2 {
+  background-image: url("img/header_2.jpg");
+}
+.slide3 {
+  background-image: url("img/header_3.jpg");
+}
+.slide4 {
+  background-image: url("img/header_4.jpg");
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-slide * {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+
+.btn {
+  margin-top: 5px;
+  padding: 0.7rem;
+  background-color: #74a3af;
+  color: #dddddd;
+  border: 2px solid #b08787;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+.btn--full:link,
+.btn--full:visited {
+  background-color: #cd5c5c;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #904040;
+  color: #fff;
+}
