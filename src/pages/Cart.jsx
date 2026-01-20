@@ -2,25 +2,29 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 function Cart() {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cart, removeFromCart } = useContext(CartContext);
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   return (
     <div style={{ padding: "40px" }}>
       <h2>Your Cart</h2>
 
-      {cartItems.length === 0 && <p>Cart is empty</p>}
+      {cart.length === 0 && <p>Cart is empty</p>}
 
-      {cartItems.map((item) => (
-        <div key={item.id} style={{ marginBottom: "16px" }}>
-          <strong>{item.title}</strong> — ₹{item.price} × {item.qty}
+      {cart.map((item) => (
+        <div key={item.id} style={{ marginBottom: "10px" }}>
+          <strong>{item.title}</strong> ₹{item.price} × {item.qty}
           <button
-            style={{ marginLeft: "12px" }}
+            style={{ marginLeft: "10px" }}
             onClick={() => removeFromCart(item.id)}
           >
             Remove
           </button>
         </div>
       ))}
+
+      {cart.length > 0 && <h3>Total: ₹{total}</h3>}
     </div>
   );
 }

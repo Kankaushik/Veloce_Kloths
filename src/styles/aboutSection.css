@@ -1,0 +1,74 @@
+.about-section {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Exact 50/50 split */
+  width: 100%;
+}
+
+/* Image Side */
+.about-image img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover; /* Ensures image fills the half-screen */
+  display: block;
+}
+
+/* Text Side */
+.about-content {
+  background-color: #fde7f3; /* The light pink color from your image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.content-wrapper {
+  max-width: 500px;
+}
+
+.about-title {
+  font-size: 4.8rem; /* Large, bold heading */
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+}
+
+.about-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 3.2rem;
+}
+
+.about-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 1.6rem 3.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.about-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr; /* Stacks image on top of text on small screens */
+  }
+  .about-title {
+    font-size: 3.2rem;
+  }
+}

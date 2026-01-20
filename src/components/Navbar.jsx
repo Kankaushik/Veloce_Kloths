@@ -5,29 +5,41 @@ export default function Navbar() {
   return (
     <header class="header sticky">
       <nav className="navbar">
-        <a href="#">
-          <img class="logo" alt="logo" src="img/logo.png" />
+        <a href="#" class="nav-text ">
+          <img class="logo " alt="logo" src="img/logo.png" />
           Veloce_Kloths
         </a>
 
         <ul className="nav-links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          <div class="nav-link-arrow">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+          </div>
+          <div class="nav-link-arrow">
+            <li>
+              <Link to="/products">Products</Link>
+            </li>
+          </div>
+          <div class="nav-link-arrow">
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </div>
+          <div class="nav-link-arrow">
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </div>
         </ul>
 
         <div className="nav-actions">
-          <Link to="/wishlist">❤️</Link>
-          <Link to="/cart">🛒</Link>
+          <Link class="wis" to="/wishlist">
+            ❤️
+          </Link>
+          <Link class="wis" to="/cart">
+            🛒
+          </Link>
           <Link to="/login" className="login-btn">
             Login
           </Link>
