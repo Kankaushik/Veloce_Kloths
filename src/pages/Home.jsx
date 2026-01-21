@@ -37,7 +37,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="section-hero">
         <div className="hero-slider">
           {slides.map((slide, index) => (
@@ -52,7 +51,6 @@ export default function Home() {
               <div className="hero-description">
                 <p className="para">{slide.desc}</p>
 
-                {/* CORRECT NAVIGATION */}
                 <Link to="/products" className="btn btn--full">
                   Shop Now
                 </Link>
@@ -61,9 +59,9 @@ export default function Home() {
           ))}
         </div>
       </section>
-      {/* 2. ABOUT SECTION (Tells your story) */}
+
       <AboutSection />
-      {/* Other Sections */}
+
       <Carousel />
       <Features />
     </>

@@ -1,26 +1,26 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
-export const CartContext = createContext();
+const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    const exists = cart.find((item) => item.id === product.id);
+    setCart((prev) => {
+      const exists = prev.find((item) => item.id === product.id);
 
-    if (exists) {
-      setCart(
-        cart.map((item) =>
+      if (exists) {
+        return prev.map((item) =>
           item.id === product.id ? { ...item, qty: item.qty + 1 } : item,
-        ),
-      );
-    } else {
-      setCart([...cart, { ...product, qty: 1 }]);
-    }
+        );
+      }
+
+      return [...prev, { ...product, qty: 1 }];
+    });
   };
 
   const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
+    setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
   return (
@@ -28,4 +28,12 @@ export function CartProvider({ children }) {
       {children}
     </CartContext.Provider>
   );
+}
+
+export function useCart() {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
+  return context;
 }

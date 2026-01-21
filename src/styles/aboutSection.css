@@ -3,25 +3,25 @@
   min-height: 80vh;
   display: flex;
   align-items: center;
+  background-color: #d9bcc9;
 }
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Exact 50/50 split */
+  grid-template-columns: 1fr 1fr;
   width: 100%;
+  border-radius: 2px;
 }
 
-/* Image Side */
 .about-image img {
   width: 100%;
-  height: 90%;
-  object-fit: cover; /* Ensures image fills the half-screen */
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-/* Text Side */
 .about-content {
-  background-color: #fde7f3; /* The light pink color from your image */
+  background-color: #fde7f3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@
 }
 
 .about-title {
-  font-size: 4.8rem; /* Large, bold heading */
+  font-size: 4.8rem;
   line-height: 1.1;
   color: #111;
   margin-bottom: 2.4rem;
@@ -63,10 +63,9 @@
   background-color: #333;
 }
 
-/* Responsive for Mobile */
 @media (max-width: 992px) {
   .about-container {
-    grid-template-columns: 1fr; /* Stacks image on top of text on small screens */
+    grid-template-columns: 1fr;
   }
   .about-title {
     font-size: 3.2rem;

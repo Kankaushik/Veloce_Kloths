@@ -3,8 +3,7 @@ import "../styles/login.css";
 function Login() {
   return (
     <div className="login-container">
-      <h2>Login</h2>
-
+      <h2 className="heading-tertiary">Login</h2>
       <form className="login-form">
         <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />

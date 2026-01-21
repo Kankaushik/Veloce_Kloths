@@ -1,16 +1,33 @@
-# React + Vite
+#Veloce_Kloths
+Veloce_Kloths is a sophisticated, consumer-centric web application designed for the modern retail landscape. Built using the React.js framework, it provides a seamless and visually engaging platform for fashion enthusiasts.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Core Functionalities:
+Global State Synchronization: The application utilizes the React Context API to ensure that the user's Cart and Wishlist remain consistent across all pages in real-time.
+Intuitive User Interface: It features a dynamic product carousel and interactive product cards that allow for immediate "Quick Add" actions.
+Live Notification Badges: The navigation bar includes real-time counters that provide instant feedback whenever a user modifies their selections.
 
-Currently, two official plugins are available:
+Optimized Checkout Flow: A dedicated cart management system handles quantity adjustments and price calculations automatically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Technical Architecture:
 
-## React Compiler
+Frontend: React.js for building a component-based user interface.
+Navigation: React Router DOM for smooth, single-page transitions without page reloads.
+Styling Strategy: A combination of CSS Grid and Flexbox for precise layout control.
+Responsive Framework: A centralized responsive.css system that adapts the design for any device size.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#Responsive Standards:
+The platform is engineered with a mobile-first philosophy to ensure accessibility for all users:
 
-## Expanding the ESLint configuration
+Desktop View: Offers full-width high-definition imagery and elegant hover animations.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tablet Adaptation: Automatically adjusts content spacing and stacks grid elements vertically for better readability.
+
+Smartphones (Below 480px): Implements fluid typography and large touch-friendly buttons to improve the mobile shopping experience.
+
+#Project Hierarchy
+
+src/
+├── context/ # Global state management for Cart and Wishlist
+├── components/ # Reusable modules like Navbar and Footer
+├── pages/ # Core pages (Home, Products, Wishlist, Cart)
+└── styles/ # Global and component-specific stylesheets

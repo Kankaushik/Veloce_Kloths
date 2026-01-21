@@ -1,12 +1,16 @@
-import "../styles/product.css";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
 
 function ProductCard({ product }) {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.title} />
       <h3>{product.title}</h3>
-      <p className="price">₹{product.price}</p>
-      <button>Add to Cart</button>
+      <p>₹{product.price}</p>
+
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
     </div>
   );
 }

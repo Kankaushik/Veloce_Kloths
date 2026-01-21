@@ -1,32 +1,55 @@
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../context/CartContext";
+import "../styles/cart.css";
 
-function Cart() {
-  const { cart, removeFromCart } = useContext(CartContext);
+export default function Cart() {
+  const { cart, removeFromCart } = useCart();
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  if (cart.length === 0) {
+    return (
+      <div className="cart-page">
+        <p className="cart-empty">Your cart is empty</p>
+      </div>
+    );
+  }
+
+  const subtotal = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h2>Your Cart</h2>
+    <div className="cart-page">
+      <h2 className="cart-title">Your Shopping Bag</h2>
 
-      {cart.length === 0 && <p>Cart is empty</p>}
+      <div className="cart-items-container">
+        {cart.map((item) => (
+          <div className="cart-item" key={item.id}>
+            <div className="cart-item-image">
+              <img src={item.image} alt={item.title} />
+            </div>
 
-      {cart.map((item) => (
-        <div key={item.id} style={{ marginBottom: "10px" }}>
-          <strong>{item.title}</strong> ₹{item.price} × {item.qty}
-          <button
-            style={{ marginLeft: "10px" }}
-            onClick={() => removeFromCart(item.id)}
-          >
-            Remove
-          </button>
-        </div>
-      ))}
+            <div className="cart-item-info">
+              <h4>{item.title}</h4>
+              <p className="item-price">₹{item.price}</p>
+              <p className="item-qty">Quantity: {item.qty}</p>
+            </div>
 
-      {cart.length > 0 && <h3>Total: ₹{total}</h3>}
+            <div className="cart-item-actions">
+              <p className="item-total">₹{item.price * item.qty}</p>
+              <button
+                className="cart-remove-btn"
+                onClick={() => removeFromCart(item.id)}
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="cart-footer">
+        <h3>
+          Subtotal: <span>₹{subtotal}</span>
+        </h3>
+        <button className="checkout-btn">Proceed to Checkout</button>
+      </div>
     </div>
   );
 }
-
-export default Cart;

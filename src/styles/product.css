@@ -1,40 +1,108 @@
+.product-section {
+  padding: 80px 5%;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
 .product-card {
   background: #ffffff;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image-wrapper {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn svg {
+  width: 22px;
+  height: 22px;
+  color: #111;
+}
+
+.wishlist-btn.active svg {
+  fill: #c1477e;
+  color: #c1477e;
+}
+
+.quick-add {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  padding: 14px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: bottom 0.3s ease;
+
+  z-index: 99;
+  pointer-events: auto;
+}
+
+.product-image-wrapper:hover .quick-add {
+  bottom: 20px;
+}
+
+.product-info {
+  padding: 20px;
   text-align: center;
 }
 
-.product-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.product-card h3 {
-  margin: 12px 0 6px;
-  font-size: 16px;
-}
-
 .price {
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.product-card button {
-  padding: 8px 16px;
-  background-color: #0d6efd;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c1477e;
 }

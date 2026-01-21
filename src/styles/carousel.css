@@ -1,7 +1,7 @@
 .carousel-section {
   position: relative;
   padding: 4rem 0;
-  background: linear-gradient(135deg, #fffaf3, #f6f4f2);
+  background-color: #d9bcc9;
   margin-bottom: 1.6rem;
 }
 
@@ -19,8 +19,19 @@
   width: 100%;
   height: 400px;
   object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeIn 0.8s;
 }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 .carousel-btn {
   position: absolute;
   top: 50%;

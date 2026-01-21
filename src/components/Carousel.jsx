@@ -3,17 +3,17 @@ import "../styles/carousel.css";
 
 const slides = [
   {
-    img: "/img/header.jpg", // Ensure these are in your PUBLIC folder
+    img: "/img/crousel_1.jpg",
     title: "Timeless Style",
     desc: "Fashion that never fades, crafted for everyday confidence.",
   },
   {
-    img: "/img/header_1.jpg",
+    img: "/img/crousel_4.jpg",
     title: "Modern Comfort",
     desc: "Designed to move with you, styled to stand out.",
   },
   {
-    img: "/img/header_2.jpg",
+    img: "/img/crousel_3.png",
     title: "Premium Everyday Wear",
     desc: "Quality fabrics, clean designs, and perfect fits.",
   },
@@ -43,7 +43,6 @@ function Carousel() {
             &#8592;
           </button>
 
-          {/* Adding a key here helps with re-renders */}
           <img
             key={index}
             className="carousel-img"
