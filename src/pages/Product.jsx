@@ -4,37 +4,42 @@ import { useWishlist } from "../context/WishlistContext";
 import "../styles/product.css";
 
 const PRODUCTS = [
-  { id: 1, title: "Modern Saree", price: 1299, image: "/img/saree.jpg" },
-  { id: 2, title: "Classic Purse", price: 459, image: "/img/purse.jpg" },
-  { id: 3, title: "Sleek Urban Blazer", price: 899, image: "/img/blazer.jpg" },
+  { id: 1, title: "Modern Saree", price: 1299, image: "/images/saree.jpg" },
+  { id: 2, title: "Classic Purse", price: 459, image: "/images/purse.jpg" },
+  {
+    id: 3,
+    title: "Sleek Urban Blazer",
+    price: 899,
+    image: "/images/blazer.jpg",
+  },
   {
     id: 4,
     title: "Sunglasses",
     price: 555,
-    image: "/img/sunglass.jpg",
+    image: "/images/sunglass.jpg",
   },
   {
     id: 4,
     title: "Designer Sunglasses",
     price: 55,
-    image: "/img/sunglass_1.jpg",
+    image: "/images/sunglass_1.jpg",
   },
   {
     id: 4,
     title: "Shoes",
     price: 505,
-    image: "/img/shoes.jpg",
+    image: "/images/shoes.jpg",
   },
   {
     id: 4,
     title: "Shirt",
     price: 1255,
-    image: "/img/shirt.jpg",
+    image: "/images/shirt.jpg",
   },
 ];
 
 export default function ProductGrid() {
-  const { addToCart } = useCart(); // ✅ FIX
+  const { addToCart } = useCart();
   const { wishlist, toggleWishlist } = useWishlist();
 
   return (

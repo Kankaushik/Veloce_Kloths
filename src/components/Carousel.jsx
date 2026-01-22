@@ -3,17 +3,17 @@ import "../styles/carousel.css";
 
 const slides = [
   {
-    img: "/img/crousel_1.jpg",
+    img: "/images/crousel_1.jpg",
     title: "Timeless Style",
     desc: "Fashion that never fades, crafted for everyday confidence.",
   },
   {
-    img: "/img/crousel_4.jpg",
+    img: "/images/crousel_4.jpg",
     title: "Modern Comfort",
     desc: "Designed to move with you, styled to stand out.",
   },
   {
-    img: "/img/crousel_3.png",
+    img: "/images/crousel_3.png",
     title: "Premium Everyday Wear",
     desc: "Quality fabrics, clean designs, and perfect fits.",
   },

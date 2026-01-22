@@ -15,7 +15,7 @@ export default function Navbar() {
     <header className="header sticky">
       <nav className="navbar">
         <Link to="/" className="nav-text">
-          <img className="logo" alt="logo" src="img/logo.png" />
+          <img className="logo" alt="logo" src="/images/logo.png" />
           Veloce_Kloths
         </Link>
 

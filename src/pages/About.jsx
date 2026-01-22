@@ -11,7 +11,7 @@ export default function About() {
 
       <section className="effortless-split">
         <div className="split-visual">
-          <img src="/img/demo.avif" alt="Fashion models" />
+          <img src="/images/demo.avif" alt="Fashion models" />
         </div>
         <div className="split-info-pink">
           <div className="text-container">
@@ -53,7 +53,7 @@ export default function About() {
       <section className="look-trend-section">
         <div className="card">
           <div className="card-image-container">
-            <img src="/img/Look.jpg" alt="Look Section" />
+            <img src="/images/Look.jpg" alt="Look Section" />
           </div>
           <div className="card-header">
             <span className="card-num">01</span>
@@ -75,7 +75,7 @@ export default function About() {
             </p>
           </div>
           <div className="card-image-container">
-            <img src="/img/Trands.jpg" alt="Trend Section" />
+            <img src="/images/Trands.jpg" alt="Trend Section" />
           </div>
         </div>
       </section>

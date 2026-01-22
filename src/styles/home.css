@@ -11,7 +11,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/header_1.jpg");
+  background-image: url("/images/header_1.jpg");
   animation: bgChange 12s infinite;
   backdrop-filter: blur(6px);
 }
@@ -35,16 +35,16 @@
   transition: opacity 1s ease-in-out;
 }
 .slide1 {
-  background-image: url("img/header_5.jpg");
+  background-image: url("/images/header_5.jpg");
 }
 .slide2 {
-  background-image: url("img/header_2.jpg");
+  background-image: url("/images/header_2.jpg");
 }
 .slide3 {
-  background-image: url("img/header_3.jpg");
+  background-image: url("/images/header_3.jpg");
 }
 .slide4 {
-  background-image: url("img/header_4.jpg");
+  background-image: url("/images/header_4.jpg");
 }
 
 .hero-slide.active {
