@@ -56,7 +56,7 @@ export default function Navbar() {
       <nav className="navbar" ref={navRef}>
         {/* Logo */}
         <Link to="/" className="nav-text">
-          <img className="logo" alt="logo" src="img/logo.png" />
+          <img className="logo" alt="logo" src="/images/logo.png" />
           <span className="brand-name">Veloce_Kloths</span>
         </Link>
 

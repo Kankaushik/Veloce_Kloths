@@ -8,7 +8,7 @@ export default function About() {
     <section className="about-section">
       <div className="about-container">
         <div className="about-image">
-          <img src="/img/demo.avif" alt="Models wearing effortless style" />
+          <img src="/images/demo.avif" alt="Models wearing effortless style" />
         </div>
 
         <div className="about-content">
