@@ -19,6 +19,24 @@ export default function About() {
               in the sky, in the street, fashion has to do with ideas, the way
               we live, what is happening.
             </p>
+
+            <div className="about-stats">
+              <div className="about-stat">
+                <span className="about-stat-num">5+</span>
+                <span className="about-stat-label">Years in Fashion</span>
+              </div>
+              <div className="about-stat-divider" />
+              <div className="about-stat">
+                <span className="about-stat-num">12K+</span>
+                <span className="about-stat-label">Happy Customers</span>
+              </div>
+              <div className="about-stat-divider" />
+              <div className="about-stat">
+                <span className="about-stat-num">500+</span>
+                <span className="about-stat-label">Products</span>
+              </div>
+            </div>
+
             <Link to="/products" className="btn btn--full about-btn-fix">
               Shop Now
             </Link>

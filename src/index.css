@@ -10,7 +10,12 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   background-color: #d9bcc9;
   color: #394450;
   -webkit-font-smoothing: antialiased;
@@ -18,18 +23,31 @@ body {
 }
 
 /* Smooth page transitions */
-section, .product-section, .features-section, .carousel-section,
-.about-section, .contact-page, .cart-page, .wishlist-page {
+section,
+.product-section,
+.features-section,
+.carousel-section,
+.about-section,
+.contact-page,
+.cart-page,
+.wishlist-page {
   animation: pageFadeIn 0.5s ease-out;
 }
 
 @keyframes pageFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Focus styles for accessibility */
-a:focus-visible, button:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid #c1477e;
   outline-offset: 2px;
   border-radius: 4px;

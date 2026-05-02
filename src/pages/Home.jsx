@@ -4,6 +4,8 @@ import "../styles/home.css";
 import Carousel from "../components/Carousel";
 import Features from "../components/Features";
 import AboutSection from "../components/AboutSection";
+import Categories from "../components/Categories";
+import Testimonials from "../components/Testimonials";
 
 const slides = [
   {
@@ -62,8 +64,12 @@ export default function Home() {
 
       <AboutSection />
 
+      <Categories />
+
       <Carousel />
       <Features />
+
+      <Testimonials />
     </>
   );
 }

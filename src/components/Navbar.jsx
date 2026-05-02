@@ -41,7 +41,9 @@ export default function Navbar() {
   // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   const navLinks = [
@@ -83,9 +85,7 @@ export default function Navbar() {
 
           <Link className="wis" to="/cart" aria-label="Cart">
             <span className="nav-icon">🛒</span>
-            {totalItems > 0 && (
-              <span className="cart-badge">{totalItems}</span>
-            )}
+            {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
           </Link>
 
           <Link to="/login" className="login-btn">

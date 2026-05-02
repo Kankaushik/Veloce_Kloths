@@ -1,0 +1,277 @@
+.testimonials-section {
+  padding: 80px 40px;
+  background: linear-gradient(160deg, #fdf0f6 0%, #fff 100%);
+  text-align: center;
+}
+
+/* ===== WRAPPER ===== */
+.testimonials-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  text-align: left;
+}
+
+/* ===== FEATURED REVIEW ===== */
+.testimonial-featured {
+  background: #fff;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 16px 50px rgba(125, 43, 79, 0.08);
+  border: 1px solid rgba(193, 71, 126, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #7d2b4f, #c1477e, #e88aab);
+}
+
+.testimonial-quote-icon {
+  font-size: 7rem;
+  line-height: 0.5;
+  color: #f0c1d5;
+  font-family: Georgia, serif;
+  font-weight: 900;
+}
+
+.testimonial-text {
+  font-size: 1.7rem;
+  line-height: 1.75;
+  color: #333;
+  font-style: italic;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #f5a623;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #f0e0e8;
+}
+
+.testimonial-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7d2b4f, #c1477e);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-meta strong {
+  font-size: 1.6rem;
+  color: #111;
+}
+
+.testimonial-meta span {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.testimonial-meta em {
+  font-size: 1.25rem;
+  color: #c1477e;
+  font-style: normal;
+}
+
+/* ===== THUMBNAILS ===== */
+.testimonial-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.thumb-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.thumb-btn:hover {
+  border-color: rgba(193, 71, 126, 0.3);
+  transform: translateX(4px);
+}
+
+.thumb-btn.active {
+  border-color: #c1477e;
+  background: rgba(193, 71, 126, 0.06);
+  box-shadow: 0 4px 16px rgba(193, 71, 126, 0.12);
+}
+
+.thumb-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c1477e, #e88aab);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thumb-btn.active .thumb-avatar {
+  background: linear-gradient(135deg, #7d2b4f, #c1477e);
+}
+
+.thumb-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.thumb-info strong {
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.thumb-info span {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* ===== STATS ROW ===== */
+.testimonial-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: linear-gradient(135deg, #7d2b4f, #c1477e);
+  border-radius: 20px;
+  padding: 36px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-number {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  text-align: center;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .testimonials-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-thumbs {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .thumb-btn {
+    flex-shrink: 0;
+    flex-direction: column;
+    text-align: center;
+    min-width: 120px;
+  }
+
+  .thumb-btn:hover {
+    transform: translateY(-4px);
+  }
+
+  .testimonial-stats {
+    gap: 8px;
+    padding: 28px 20px;
+  }
+
+  .stat-number {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .testimonials-section {
+    padding: 60px 20px;
+  }
+
+  .testimonial-featured {
+    padding: 28px 24px;
+  }
+
+  .testimonial-stats {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    flex: 0 0 40%;
+  }
+}

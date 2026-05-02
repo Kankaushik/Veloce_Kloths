@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useWishlist } from "../context/WishlistContext";
 import { useCart } from "../context/CartContext";
 import "../styles/product.css";
@@ -10,16 +11,23 @@ export default function Wishlist() {
 
   if (!wishlist || wishlist.length === 0) {
     return (
-      <div className="wishlist-page empty-state">
-        <h2>Your Wishlist is Empty</h2>
-        <p>Go back to the shop to save your favorites!</p>
+      <div className="wishlist-page wishlist-empty-page">
+        <div className="wishlist-empty-box">
+          <div className="wishlist-empty-icon">❤️</div>
+          <h2>Your Wishlist is Empty</h2>
+          <p>Save your favourite pieces here so you never lose track of styles you love.</p>
+          <Link to="/products" className="wishlist-empty-btn">Explore Collection</Link>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="wishlist-page">
-      <h2 className="section-title">My Saved Items</h2>
+      <div className="wishlist-header">
+        <h2 className="section-title">My Saved Items</h2>
+        <span className="wishlist-count">{wishlist.length} item{wishlist.length !== 1 ? "s" : ""} saved</span>
+      </div>
 
       <div className="product-grid">
         {wishlist.map((product) => (
@@ -30,6 +38,7 @@ export default function Wishlist() {
               <button
                 className="wishlist-btn active"
                 onClick={() => toggleWishlist(product)}
+                aria-label="Remove from wishlist"
               >
                 ❤️
               </button>
@@ -41,7 +50,7 @@ export default function Wishlist() {
 
             <div className="product-info">
               <h3>{product.title}</h3>
-              <p className="price">₹{product.price}</p>
+              <p className="price">₹{product.price.toLocaleString()}</p>
             </div>
           </div>
         ))}
